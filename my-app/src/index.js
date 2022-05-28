@@ -4,13 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Button from './chapter_03/Button';
-
+import Clock from './chapter_04/Clock'
 import Library from './chapter_03/Library';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Library />
-    <Button />
+    <CommentList />
   </React.StrictMode>,
   document.getElementById('root')
 );
