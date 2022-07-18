@@ -1,0 +1,32 @@
+import React, {Component} from 'react'
+import datatype from 'prop-types'
+import R015_Map from './R015_Map'
+
+class R018_PropsDatatype extends Component{
+    render(){
+        let{
+            String, Number, Boolean, Array, Object_Json, Function
+        } = this.props
+        return(
+            <div style = {{padding : "0px"}}>
+                <p>stringProps: {String}</p>
+                <p>NumberProps : {Number}</p>
+                <span>BooleanProps : {Boolean.toString()}</span>
+                <p>ArrayProps : {Array.toString()}</p>
+                <p>Object JsonProps : {JSON.stringify(Object_Json)}</p>
+                <p>FunctionProps : {Function}</p>
+            </div>
+        )
+    }
+}
+
+R018_PropsDatatype.propTypes ={
+    String : datatype.number,
+    Number : datatype.number,
+    Boolean : datatype.bool,
+    Array : datatype.array,
+    Object_Json : datatype.object,
+    Function : datatype.func
+}
+
+export default R018_PropsDatatype
