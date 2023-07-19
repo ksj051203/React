@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 
 import AddUser from './components/Users/AddUser';
-import UserInfo from './components/Users/UserInfo';
+import UserList from './components/Users/UserList';
 
 function App() {
-  const [users, setUsers] = useState([{}])
+  const [users, setUsers] = useState([])
 
   const AddUsers = (user) =>{
     setUsers((prevState) => {
-      return [...prevState, user]
+      return [...prevState, {id: user.id, name: user.name, age: user.age}]
     })
   }
  
   return (
     <div>
       <AddUser userInformation = {AddUsers}/>
-      <UserInfo userList = {users}/>
+      <UserList userList = {users}/>
     </div>
   );
 }
